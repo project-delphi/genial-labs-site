@@ -14,7 +14,7 @@ nav{
    text-align: center; 
 }
 
-a{
+nav > a{
     color: #29a482 !important;
     font-weight: bold;
     text-decoration: none;
