@@ -5,6 +5,10 @@ body,header {
     color: #afb4b7;
 }
 
+body {
+    text-align: justify;
+  }
+
 
 .hero {
     text-align: center;
