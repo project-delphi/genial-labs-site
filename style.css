@@ -9,7 +9,17 @@ body {
     text-align: justify;
   }
 
+h1 {
+    margin: 0;
+}
 
+img {
+    margin: 0;
+}
+
+.slogan {
+    margin:2px 0 40px 0;
+}
 .hero {
     text-align: center;
 }
@@ -22,10 +32,29 @@ nav > a{
     color: #29a482 !important;
     font-weight: bold;
     text-decoration: none;
-    margin: 0 70px;
+    margin: 0 40px;
 }
 
 section {
     border: none !important;
     margin: 0 !important;
 }
+
+/* Targeting small tablets in portrait mode (7-8 inches) */
+@media only screen and (max-width: 1000px) and (orientation: portrait) {
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav > a{
+        
+        color: #29a482 !important;
+        font-weight: bold;
+        text-decoration: none;
+        margin: 8px 0px;
+        
+    }
+  
+  }
