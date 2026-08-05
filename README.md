@@ -60,8 +60,9 @@ is nothing to maintain and nothing that slows the page down.
 
 ## What I still need from you
 
-These are marked as `TODO(ravi)` comments in `index.html`. None of them break the site — the
-page is honest and complete without them — but each materially improves it. Roughly in order of
+None of these break the site — the page is honest and complete without them — but each
+materially improves it. They are tracked here rather than as comments in `index.html`, because
+HTML comments are readable in view-source and these are internal notes. Roughly in order of
 impact:
 
 1. **Client engagements.** Two card slots are scaffolded and commented out at the end of the
@@ -70,39 +71,35 @@ impact:
    outcome (with a number if you have one), and a link if anything is public. Tell me what is
    NDA-safe — "a Series B biotech" reads fine if you cannot name them.
 
-2. **Brian Ripley — how should he be described?** You asked for him to be added, but your
-   LinkedIn gives your doctoral advisor as **Professor Gesine Reinert**, and Ripley appears
-   nowhere on the profile. Both names are currently off the site rather than guessed at. Tell me
-   the actual relationship — supervisor, co-supervisor, tutor, examiner — and I will word it.
+2. **Social Finance — needs detail for a proper card.** Currently a one-line entry in the work
+   history: "AI engineering consulting, 2025". This is your only named consulting client on the
+   site, so it is worth a full work card. Send me problem, approach, stack and outcome, plus
+   which Social Finance entity it is (there are UK and US organisations of that name) — and
+   confirm you can name them publicly, since this is client work rather than employment.
 
-3. **Social Finance is not on the site.** You asked for it, but it appears nowhere on your
-   LinkedIn and no search turned up any connection, so there was nothing to verify. Send me the
-   entity and what you did there.
+3. **Ritual.co job title.** The card and work-history entry say "machine learning and data
+   engineering", which is a description of the work taken from a colleague's recommendation on
+   your LinkedIn, not your actual title — the profile has no experience entry for Ritual. Send
+   me the real title and I will swap it in.
 
-4. **Ritual.co is not on the site either.** It shows up only in recommendations on your profile
-   (the natural-language-to-SQL project, ML meet-ups you ran, layoffs in COVID), not as an
-   experience entry. That NL-to-SQL work connects directly to your PyCon 2019 lightning talk and
-   the `semantic-parsing-to-sql` repo, so it would make a good work card — send me dates and
-   your title.
-
-5. **Sargassum detector outcome.** The card describes what was built but claims no result, which
+4. **Sargassum detector outcome.** The card describes what was built but claims no result, which
    is the honest default. If you have detection performance, or it was used operationally, that
    turns a project into a case study.
 
-6. **Open-source scope.** The site claims exactly what I could verify: three merged commits to
+5. **Open-source scope.** The site claims exactly what I could verify: three merged commits to
    PyTorch Geometric and one to einops. Your GitHub profile also shows forks of `mlx`,
    `mlx-graphs` and `pytorch-frame` with no upstream commits, so those are deliberately not
    claimed — a technical buyer checks this in under a minute, and an overclaim here would cost
    more than the claim is worth. If you have contributions under another account or email, send
    them and I will widen it.
 
-7. **Engagement model.** Typical length, advisory vs. build split, availability, and whether to
+6. **Engagement model.** Typical length, advisory vs. build split, availability, and whether to
    publish a rate. Being concrete filters bad-fit enquiries before they reach your inbox.
 
-8. **Years of experience.** I left a number out of the hero because I could not verify one. Give
+7. **Years of experience.** I left a number out of the hero because I could not verify one. Give
    me a start year and I will add it.
 
-9. **A proper `og:image`.** Currently pointing at `assets/brain_logo.png` (379×262) so link
+8. **A proper `og:image`.** Currently pointing at `assets/brain_logo.png` (379×262) so link
    previews are not broken. A purpose-made 1200×630 image at `assets/og-image.png` would look
    considerably better when the site is shared.
 
