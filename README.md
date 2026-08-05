@@ -70,33 +70,39 @@ impact:
    outcome (with a number if you have one), and a link if anything is public. Tell me what is
    NDA-safe — "a Series B biotech" reads fine if you cannot name them.
 
-2. **Employment history.** There is no employment history anywhere public — not on
-   project-delphi.github.io, not in the repos, and I cannot read LinkedIn. Named employers and
-   roles are the strongest credibility signal on sites like huyenchip.com. Send me companies,
-   roles and rough dates and I will write the About paragraph properly.
+2. **Brian Ripley — how should he be described?** You asked for him to be added, but your
+   LinkedIn gives your doctoral advisor as **Professor Gesine Reinert**, and Ripley appears
+   nowhere on the profile. Both names are currently off the site rather than guessed at. Tell me
+   the actual relationship — supervisor, co-supervisor, tutor, examiner — and I will word it.
 
-3. **The AAV capsid publication.** "Fine tuning AAV: machine learning the capsid" is listed as a
-   publication on your personal site, but I could not find a venue, DOI or public link. If it is
-   published, send the citation. Also: was this client work, and can it be named?
+3. **Social Finance is not on the site.** You asked for it, but it appears nowhere on your
+   LinkedIn and no search turned up any connection, so there was nothing to verify. Send me the
+   entity and what you did there.
 
-4. **Sargassum detector outcome.** The card describes what was built but claims no result, which
+4. **Ritual.co is not on the site either.** It shows up only in recommendations on your profile
+   (the natural-language-to-SQL project, ML meet-ups you ran, layoffs in COVID), not as an
+   experience entry. That NL-to-SQL work connects directly to your PyCon 2019 lightning talk and
+   the `semantic-parsing-to-sql` repo, so it would make a good work card — send me dates and
+   your title.
+
+5. **Sargassum detector outcome.** The card describes what was built but claims no result, which
    is the honest default. If you have detection performance, or it was used operationally, that
    turns a project into a case study.
 
-5. **Open-source scope.** The site claims exactly what I could verify: three merged commits to
+6. **Open-source scope.** The site claims exactly what I could verify: three merged commits to
    PyTorch Geometric and one to einops. Your GitHub profile also shows forks of `mlx`,
    `mlx-graphs` and `pytorch-frame` with no upstream commits, so those are deliberately not
    claimed — a technical buyer checks this in under a minute, and an overclaim here would cost
    more than the claim is worth. If you have contributions under another account or email, send
    them and I will widen it.
 
-6. **Engagement model.** Typical length, advisory vs. build split, availability, and whether to
+7. **Engagement model.** Typical length, advisory vs. build split, availability, and whether to
    publish a rate. Being concrete filters bad-fit enquiries before they reach your inbox.
 
-7. **Years of experience.** I left a number out of the hero because I could not verify one. Give
+8. **Years of experience.** I left a number out of the hero because I could not verify one. Give
    me a start year and I will add it.
 
-8. **A proper `og:image`.** Currently pointing at `assets/brain_logo.png` (379×262) so link
+9. **A proper `og:image`.** Currently pointing at `assets/brain_logo.png` (379×262) so link
    previews are not broken. A purpose-made 1200×630 image at `assets/og-image.png` would look
    considerably better when the site is shared.
 
