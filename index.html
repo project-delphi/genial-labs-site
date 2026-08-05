@@ -4,68 +4,576 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Genial Labs">
-    <meta property="og:description" content="AI Engineering, Agents, LLMs, and ML Engineering consultancy">
-    <meta property="og:image" content="https://genial-labs.com/assets/favicon.ico">
-    <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <title>Ravi Kalia — Machine learning consulting | Genial Labs</title>
+    <meta name="description"
+        content="Ravi Kalia, DPhil (Oxford, Statistics). Independent ML consulting: LLM agents and retrieval systems, probability calibration and model evaluation, and applied machine learning in scientific domains.">
+    <link rel="canonical" href="https://genial-labs.com/">
+    <meta name="theme-color" content="#011d2b">
+
+    <meta property="og:title" content="Ravi Kalia — Machine learning consulting | Genial Labs">
+    <meta property="og:description"
+        content="Independent ML consulting: LLM agents and retrieval systems, probability calibration and model evaluation, and applied machine learning in scientific domains.">
+    <!-- TODO(ravi): replace with a purpose-made 1200x630 image at assets/og-image.png.
+         Pointing at the logo for now so link previews are not broken (the previous
+         value referenced assets/favicon.ico, which no longer exists and 404'd). -->
+    <meta property="og:image" content="https://genial-labs.com/assets/brain_logo.png">
+    <meta property="og:url" content="https://genial-labs.com/">
+    <meta property="og:site_name" content="Genial Labs">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
 </head>
 
 <body>
-    <div class="hero">
-        <img src="./assets/brain_logo.png" alt="Genial Labs Logo">
-        <h1> Genial Labs</h1>
-        <p class="slogan">A research lab + software consultancy for AI</p>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    </div>
-    <nav>
-        <a href="#overview">Overview</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <header class="site-header">
+        <a class="wordmark" href="/">
+            <img src="./assets/favicon.png" alt="" width="36" height="25">
+            <span>Genial&nbsp;Labs</span>
+        </a>
+        <nav aria-label="Primary">
+            <a href="#work">Work</a>
+            <a href="#help">Services</a>
+            <a href="#writing">Writing</a>
+            <a href="#talks">Talks</a>
+            <a href="#about">About</a>
+            <a class="btn btn-small" href="https://calendar.app.google/dGPzDkEEuXYKe1zj6">Book a call</a>
+        </nav>
+    </header>
 
-    <section id="overview">
-            <h2>Overview</h2>
-            <div>
-                <p>Genial Labs is a research lab + software consultancy specializing in cutting-edge AI solutions. We deliver production-ready systems leveraging generative AI, AI agents, probabilistic ML, NLP, LLMs, and modern AI engineering practices. </p>
-                <p>Our expertise spans the full ML engineering lifecycle—from model development and fine-tuning to deployment, monitoring, and optimization. We combine deep research insights with practical software craftsmanship to build scalable, reliable AI systems that unlock your data's potential and drive real business impact. </p>
-              </div>
-    </section>
+    <main id="main">
 
-    <section id="expertise">
-        <h2>Expertise</h2>
-            <ul>
-                <li> AI Agents & Multi-Agent Systems </li>
-                <li> AI Engineering & MLOps </li>
-                <li> LLM Ops & Production Deployment </li>
-                <li> RAG (Retrieval-Augmented Generation) </li>
-                <li> LLM Fine-tuning & Optimization </li>
-                <li> Vector Databases & Embeddings </li>
-                <li> Prompt Engineering & LLM Evaluation </li>
-                <li> Generative AI & Foundation Models </li>
-                <li> NLP & Large Language Models </li>
-                <li> Probabilistic Machine Learning </li>
-                <li> Scalable AI Software Development </li>
-                <li> AWS Cloud Infrastructure for AI </li>
+        <!-- ============================ HERO ============================ -->
+        <section class="hero">
+            <p class="eyebrow">Genial Labs</p>
+            <h1>Ravi Kalia</h1>
+            <p class="positioning">
+                I help teams ship machine learning systems that hold up in production — LLM agents
+                and retrieval pipelines, and the evaluation work that tells you whether any of it
+                is actually working.
+            </p>
+            <!-- TODO(ravi): I deliberately avoided putting a years-of-experience number here,
+                 because I could not verify one — your thesis was submitted in 2010 and your
+                 earliest listed talk is 2012, but that does not establish a career start date.
+                 If you want "N years of applied ML" in the hero, tell me the year and I will
+                 add it. It is a strong signal, but only if it is right. -->
+            <p class="credential">
+                DPhil in Statistics, University of Oxford &middot; applied machine learning across
+                scientific, financial and document-heavy domains.
+            </p>
+            <p class="cta-row">
+                <a class="btn" href="https://calendar.app.google/dGPzDkEEuXYKe1zj6">Book a call</a>
+                <a class="btn btn-ghost" href="#work">See the work</a>
+            </p>
+        </section>
+
+        <!-- ========================= SELECTED WORK ======================= -->
+        <section id="work">
+            <h2>Selected work</h2>
+            <p class="section-intro">
+                Public work, with the code and papers attached. Everything below is linked to
+                something you can read or run.
+            </p>
+
+            <div class="work-grid">
+
+                <article class="work-card">
+                    <h3>Ordinal classification and calibrated probabilities</h3>
+                    <p class="card-meta">Doctoral research &middot; University of Oxford, Department of Statistics &middot; 2010</p>
+                    <dl>
+                        <dt>Problem</dt>
+                        <dd>
+                            Many prediction problems have <em>ordered</em> outcomes, and the useful
+                            output is not a label but a calibrated probability. Standard classifiers
+                            give neither.
+                        </dd>
+                        <dt>Approach</dt>
+                        <dd>
+                            Developed RankingSVM, an ordinal classifier using thermometer encoding
+                            to capture non-linearity through support vector machines; paired it with
+                            Bayesian proportional-odds logistic regression to estimate probabilities
+                            consistent with observed market prices.
+                        </dd>
+                        <dt>Evaluation</dt>
+                        <dd>
+                            Introduced a non-parametric method for comparing ordinal classifiers by
+                            treating evaluation as a betting problem — a model's predictive quality
+                            is measured by what a stochastic-programming gambling strategy built on
+                            it would actually earn. Proper scoring in the most literal sense.
+                        </dd>
+                    </dl>
+                    <p class="links">
+                        <a href="https://github.com/project-delphi/doctoral-thesis">Thesis (PDF)</a>
+                        <a href="https://github.com/project-delphi/rankingSVM-algorithm">RankingSVM paper</a>
+                        <a href="https://github.com/project-delphi/comparing-classifiers">Comparing classifiers</a>
+                        <a href="https://github.com/project-delphi/ordinal-classification-survey">Survey</a>
+                    </p>
+                </article>
+
+                <article class="work-card">
+                    <h3>Machine learning for gene therapy</h3>
+                    <p class="card-meta">rAAV capsid, promoter and ITR engineering</p>
+                    <dl>
+                        <dt>Problem</dt>
+                        <dd>
+                            Designing recombinant AAV vectors means searching a combinatorial
+                            sequence space that is far too large to assay exhaustively in the lab.
+                        </dd>
+                        <dt>Approach</dt>
+                        <dd>
+                            Applied sequence models to capsid, promoter and ITR engineering to
+                            prioritise candidates for wet-lab validation, so experimental budget
+                            goes to the variants most likely to work.
+                        </dd>
+                    </dl>
+                    <!-- TODO(ravi): "Fine tuning AAV: machine learning the capsid" is listed as a
+                         publication on project-delphi.github.io but I could not find a venue, DOI or
+                         public link. If it is published, add the citation and link here. Also confirm
+                         whether this was client work — if so, whether it can be named. -->
+                    <p class="links">
+                        <a href="https://project-delphi.github.io/gene-therapy-talk/">Talk: ML in Gene Therapy</a>
+                    </p>
+                </article>
+
+                <article class="work-card">
+                    <h3>Document ingestion for retrieval systems</h3>
+                    <p class="card-meta">Open-source tooling</p>
+                    <dl>
+                        <dt>Problem</dt>
+                        <dd>
+                            Retrieval systems rarely fail at the embedding step. They fail earlier,
+                            on the unglamorous work of getting real Word and PDF documents into
+                            clean, correctly segmented text.
+                        </dd>
+                        <dt>Approach</dt>
+                        <dd>
+                            Built and released two pieces of that layer: a Word document parser
+                            producing structured JSON, and a classifier that labels extracted PDF
+                            text chunks by type so downstream chunking can respect document
+                            structure instead of splitting on character counts.
+                        </dd>
+                        <dt>Stack</dt>
+                        <dd>Python, <code>unstructured</code>, scikit-learn</dd>
+                    </dl>
+                    <p class="links">
+                        <a href="https://github.com/project-delphi/word_file_parser">word_file_parser</a>
+                        <a href="https://github.com/project-delphi/classify-pdf-text-chunks">classify-pdf-text-chunks</a>
+                    </p>
+                </article>
+
+                <article class="work-card">
+                    <h3>Object detection in satellite imagery</h3>
+                    <p class="card-meta">Sargassum detection from LANDSAT data</p>
+                    <dl>
+                        <dt>Problem</dt>
+                        <dd>
+                            Sargassum seaweed blooms wash onto Caribbean coastlines with little
+                            warning. Detecting rafts at sea from satellite imagery gives coastal
+                            operators lead time.
+                        </dd>
+                        <dt>Approach</dt>
+                        <dd>
+                            Built an object detector over multispectral LANDSAT scenes to locate
+                            sargassum rafts on open water.
+                        </dd>
+                    </dl>
+                    <!-- TODO(ravi): add an Outcome row — detection performance, whether this was
+                         ever deployed or used operationally, and by whom. Right now the card
+                         describes the build but claims no result, which is the honest default. -->
+                    <p class="links">
+                        <a href="https://github.com/project-delphi/object-detector">Code and notebooks</a>
+                    </p>
+                </article>
+
+                <article class="work-card">
+                    <h3>Anomaly detection without labels</h3>
+                    <p class="card-meta">Isolation forests and random cut forests</p>
+                    <dl>
+                        <dt>Problem</dt>
+                        <dd>
+                            Anomaly detection is usually posed where it is hardest: no labels, heavy
+                            class imbalance, and a shifting definition of "normal".
+                        </dd>
+                        <dt>Approach</dt>
+                        <dd>
+                            Implemented and compared isolation forests and random cut forests on
+                            unlabelled data, including the streaming case where the model has to
+                            update as the baseline moves.
+                        </dd>
+                    </dl>
+                    <p class="links">
+                        <a href="https://github.com/project-delphi/anomaly_detection">Code</a>
+                        <a href="https://github.com/project-delphi/feature-selection">Feature selection experiments</a>
+                    </p>
+                </article>
+
+                <!-- ==================================================================
+                     TODO(ravi): CLIENT ENGAGEMENTS
+
+                     Two slots are scaffolded below, commented out so the live page only
+                     ever shows work that is real. Uncomment and fill in, one per
+                     engagement. This is the single highest-value addition to the site —
+                     everything above is public/personal work, and a buyer wants to see
+                     that someone paid you to do this.
+
+                     For each, I need: problem, approach, stack, outcome (a number if you
+                     have one), and a link if anything is public. Also tell me what is
+                     NDA-safe — "a Series B biotech" works fine if you cannot name them.
+
+                <article class="work-card">
+                    <h3>ENGAGEMENT TITLE</h3>
+                    <p class="card-meta">CLIENT OR SECTOR &middot; YEAR</p>
+                    <dl>
+                        <dt>Problem</dt>
+                        <dd>WHAT THEY CAME TO YOU WITH</dd>
+                        <dt>Approach</dt>
+                        <dd>WHAT YOU BUILT</dd>
+                        <dt>Stack</dt>
+                        <dd>TOOLS</dd>
+                        <dt>Outcome</dt>
+                        <dd>RESULT, WITH A NUMBER IF YOU HAVE ONE</dd>
+                    </dl>
+                    <p class="links"><a href="URL">Writeup</a></p>
+                </article>
+
+                ================================================================== -->
+
+            </div>
+        </section>
+
+        <!-- ========================== SERVICES =========================== -->
+        <section id="help">
+            <h2>How I can help</h2>
+            <p class="section-intro">
+                Four things I am genuinely good at, each tied to work above rather than to a
+                keyword list.
+            </p>
+
+            <div class="capability-list">
+                <article class="capability">
+                    <h3>Evaluation, calibration and knowing whether it works</h3>
+                    <p>
+                        The hardest question in an ML project is rarely "can we build it" — it is
+                        "how do we know it is working, and how confident should we be". My doctorate
+                        was on exactly this: turning classifier scores into probabilities you can
+                        make decisions against, and measuring models by what acting on them would
+                        cost or earn. It is the part of the field most AI consultancies skip.
+                    </p>
+                    <p class="links"><a href="#work">See the doctoral work &rarr;</a></p>
+                </article>
+
+                <article class="capability">
+                    <h3>LLM agents and retrieval systems</h3>
+                    <p>
+                        Agent architectures, context and memory management, and RAG pipelines built
+                        on documents that are messy in the ways real documents are. I write about
+                        this constantly and have shipped the ingestion tooling underneath it.
+                    </p>
+                    <p class="links"><a href="#writing">Recent writing &rarr;</a></p>
+                </article>
+
+                <article class="capability">
+                    <h3>Applied ML in scientific domains</h3>
+                    <p>
+                        Gene therapy and proteomics, remote sensing, drug-discovery feature
+                        selection. Domains where the data is expensive, the experiments are slow,
+                        and the model's job is to decide what to test next.
+                    </p>
+                    <p class="links"><a href="#work">See the gene therapy work &rarr;</a></p>
+                </article>
+
+                <article class="capability">
+                    <h3>Getting models into production</h3>
+                    <p>
+                        Taking research code to something monitored, tested and maintainable — the
+                        subject of my PyData talk on ML in production, and of a talk on using
+                        machine learning to supervise test-driven development.
+                    </p>
+                    <p class="links"><a href="#talks">See the talks &rarr;</a></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- =========================== WRITING =========================== -->
+        <section id="writing">
+            <h2>Writing</h2>
+            <p class="section-intro">
+                I write regularly at <em>Synthetic Musings</em> — currently 80+ posts on machine
+                learning, agents, statistics and the tooling around them.
+            </p>
+
+            <ul class="post-list">
+                <li>
+                    <time datetime="2026-08-03">3 Aug 2026</time>
+                    <a href="https://project-delphi.github.io/ml-blog/posts/intelligence-for-novel-problems/">Built for Problems It Has Never Seen</a>
+                </li>
+                <li>
+                    <time datetime="2026-08-03">3 Aug 2026</time>
+                    <a href="https://project-delphi.github.io/ml-blog/posts/llm-agent-memory/">Your LLM Has No Memory. Everything Else Is Engineering.</a>
+                </li>
+                <li>
+                    <time datetime="2026-08-03">3 Aug 2026</time>
+                    <a href="https://project-delphi.github.io/ml-blog/posts/open-source-tts-history/">From Formants to Foundation Models</a>
+                </li>
+                <li>
+                    <time datetime="2026-08-02">2 Aug 2026</time>
+                    <a href="https://project-delphi.github.io/ml-blog/posts/llm-agents-from-first-principles/">LLM Agents from First Principles</a>
+                </li>
+                <li>
+                    <time datetime="2026-07-31">31 Jul 2026</time>
+                    <a href="https://project-delphi.github.io/ml-blog/posts/explainability-localization/">Explainability Is a Localization Problem</a>
+                </li>
+                <li>
+                    <time datetime="2026-07-30">30 Jul 2026</time>
+                    <a href="https://project-delphi.github.io/ml-blog/posts/nvidia-buys-the-pyg-team/">Nvidia Bought the Team Behind the Library I Contribute To</a>
+                </li>
+                <li>
+                    <time datetime="2026-07-28">28 Jul 2026</time>
+                    <a href="https://project-delphi.github.io/ml-blog/posts/brian-ripley-rousseeuw-prize/">The Professor Who Let Us Break R First</a>
+                </li>
+                <li>
+                    <time datetime="2026-07-28">28 Jul 2026</time>
+                    <a href="https://project-delphi.github.io/ml-blog/posts/swarms-in-worktrees/">Swarms in Worktrees: How Claude Code Agents Work in Parallel</a>
+                </li>
             </ul>
-    </section>
 
-    <section id="about">
-        <h2>About</h2>
-      <p> <a href="https://project-delphi.github.io/">Ravi</a>, a principal at Genial Labs, is an experienced data professional with a background in engineering, team leadership, research and education. Genial Labs operates with a talented team of AI engineers and researchers dedicated to delivering cutting-edge solutions. </p>
-      <p>If you need more hands-on help, we're open to new consulting work and other forms of advisory. If you need help with your project, you can reach out to our team <a href="#contact">here</a>. </p>        
-    </section>
+            <p class="links">
+                <a href="https://project-delphi.github.io/ml-blog/">All writing &rarr;</a>
+            </p>
 
-    <section id="contact">
-        <h2>Contact</h2>
-       Email: <a href="mailto:ravi@genial-labs.com"> ravi@genial-labs.com </a>
-       
-    </section>
-        
+            <!-- TODO(ravi): this list is hardcoded and will go stale. Two options for later:
+                 (1) enable an RSS feed on the Quarto blog by adding `feed: true` to the listing
+                     in _quarto.yml in the ml-blog repo (it currently publishes none —
+                     /ml-blog/index.xml returns 404), then pull it in; or
+                 (2) migrate the blog onto genial-labs.com/writing to consolidate the domain.
+                 Until then, refresh these eight entries when you publish something notable. -->
+        </section>
+
+        <!-- ==================== TALKS, PAPERS, OPEN SOURCE ==================== -->
+        <section id="talks">
+            <h2>Talks, papers and open source</h2>
+
+            <h3 class="subhead">Recent talks</h3>
+            <ul class="post-list">
+                <li>
+                    <time datetime="2026">2026</time>
+                    <a href="https://project-delphi.github.io/gene-therapy-talk/">ML in Gene Therapy: rAAV capsid, promoter and ITR engineering</a>
+                </li>
+                <li>
+                    <time datetime="2026">2026</time>
+                    <a href="https://project-delphi.github.io/ai-past-present-future-talk/">AI: Past, Present and Future</a>
+                </li>
+                <li>
+                    <time datetime="2026">2026</time>
+                    <a href="https://project-delphi.github.io/variational-autoencoders/">Autoencoders and Variational Autoencoders</a>
+                </li>
+                <li>
+                    <time datetime="2026">2026</time>
+                    <a href="https://project-delphi.github.io/first-job-in-industry/">Getting Your First Job in Industry</a>
+                </li>
+            </ul>
+
+            <h3 class="subhead">Conference and academic talks</h3>
+            <ul class="post-list plain">
+                <li><time datetime="2019-11">Nov 2019</time> <span>Natural Language to Complex SQL within Grasp &mdash; <em>PyCon, Toronto</em></span></li>
+                <li><time datetime="2019-09">Sep 2019</time> <span>ML in Production &mdash; <em>PyData, Montreal</em></span></li>
+                <li><time datetime="2019-08">Aug 2019</time> <span>Machine Learning Supervising TDD &mdash; <em>Software Crafters, Montreal</em></span></li>
+                <li><time datetime="2019-05">May 2019</time> <span>Anomaly Detection using Clustering &mdash; <em>National Polytechnic Institute, Mexico City</em></span></li>
+                <li><time datetime="2019-04">Apr 2019</time> <span>Introduction to Machine Learning &mdash; <em>Google Developer Group, Mexico City</em></span></li>
+                <li><time datetime="2018-10">Oct 2018</time> <span>Building Financial Services on Blockchain &mdash; <em>Viva La Crypto Festival, Monterrey</em></span></li>
+                <li><time datetime="2016-10">Oct 2016</time> <span>Assessing Predictive Probabilities &mdash; <em>University of Victoria</em></span></li>
+                <li><time datetime="2015-02">Feb 2015</time> <span>Sports Betting in Asia &mdash; <em>University of the Philippines, Manila</em></span></li>
+                <li><time datetime="2012-04">Apr 2012</time> <span>Markov Decision Processes &mdash; <em>Queen's University, Ontario</em></span></li>
+            </ul>
+
+            <h3 class="subhead">Open source</h3>
+            <p>
+                Merged contributions to
+                <a href="https://github.com/pyg-team/pytorch_geometric/commits?author=project-delphi">PyTorch Geometric</a>
+                (device-handling test decorators, packaging, documentation) and
+                <a href="https://github.com/arogozhnikov/einops/commits?author=project-delphi">einops</a>.
+            </p>
+            <!-- TODO(ravi): stated deliberately narrowly. I could verify exactly four merged
+                 upstream commits under the `project-delphi` account: three in pytorch_geometric,
+                 one in einops. Your GitHub profile also shows forks of mlx, mlx-graphs and
+                 pytorch-frame with no upstream commits, so those are not claimed here — a
+                 technical buyer checks this in under a minute. If you have contributions under
+                 a different account or email, send them and I will widen this. -->
+        </section>
+
+        <!-- ============================ ABOUT ============================ -->
+        <section id="about">
+            <h2>About</h2>
+
+            <p>
+                I am Ravi Kalia. I did my doctorate in the Department of Statistics at the
+                University of Oxford, on ordinal classification and on the awkward question of how
+                you tell whether a probabilistic model is any good — work that turned out to be a
+                strange but useful preparation for a decade of applied machine learning.
+            </p>
+
+            <!-- TODO(ravi): THIS IS THE BIGGEST GAP ON THE SITE.
+                 There is no employment history anywhere public — not on project-delphi.github.io,
+                 not in the repos. Named employers and roles are the strongest credibility signal
+                 on sites like huyenchip.com, and I will not invent them. Send me roles, companies
+                 and rough dates and I will write a proper paragraph here. -->
+
+            <p>
+                Since then I have worked across gene therapy and proteomics, remote sensing,
+                financial modelling and document-heavy NLP, and have spoken on machine learning at
+                PyCon, PyData, Google Developer Group and several universities across four
+                countries. I write regularly at <a href="https://project-delphi.github.io/ml-blog/">Synthetic
+                Musings</a>.
+            </p>
+
+            <p>
+                What holds my attention right now: agent memory and context management, which I
+                think is where most of the real engineering in LLM systems currently sits;
+                explainability treated as a localization problem rather than a feature-attribution
+                one; and the perennial question of calibration — how much of a model's confidence
+                you should actually believe.
+            </p>
+
+            <p>
+                I take on a small number of engagements at a time, usually some mix of hands-on
+                build work and advisory. If you have a problem where the modelling is genuinely
+                uncertain — where it is not obvious whether the thing can be built, or how you
+                would know if it worked — that is the kind of work I most want to hear about.
+            </p>
+
+            <!-- TODO(ravi): add engagement model specifics if you want to pre-qualify leads —
+                 typical engagement length, advisory vs. build split, availability, and whether
+                 to publish a rate or day rate. Being concrete here filters out bad-fit enquiries
+                 before they reach your inbox. -->
+
+            <p class="links">
+                <a href="https://project-delphi.github.io/">Personal site</a>
+                <a href="https://github.com/project-delphi">GitHub</a>
+                <a href="https://www.linkedin.com/in/ravi-kalia-phd">LinkedIn</a>
+            </p>
+        </section>
+
+        <!-- ========================= WORK TOGETHER ======================== -->
+        <section id="contact">
+            <h2>Work together</h2>
+            <p class="section-intro">
+                The fastest route is to put half an hour in my calendar. If you would rather write
+                first, the form goes straight to my inbox.
+            </p>
+
+            <p class="cta-row">
+                <a class="btn" href="https://calendar.app.google/dGPzDkEEuXYKe1zj6">Book a 30-minute call</a>
+            </p>
+
+            <!-- Posts to Formspree form xeajqklq -> ravi@genial-labs.com. Formspree requires the
+                 first submission on a new form to be confirmed by the owner, so send one test
+                 message yourself before relying on this. -->
+            <form class="contact-form" action="https://formspree.io/f/xeajqklq" method="POST">
+                <!-- Formspree control fields. _subject sets the email subject line so enquiries
+                     are identifiable in the inbox; _gotcha is a honeypot — real people never see
+                     it, bots fill it in, and Formspree silently discards those submissions. -->
+                <input type="hidden" name="_subject" value="New enquiry from genial-labs.com">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+                <div class="field">
+                    <label for="company">Company <span class="optional">(optional)</span></label>
+                    <input type="text" id="company" name="company" autocomplete="organization">
+                </div>
+                <div class="field">
+                    <label for="message">What are you working on?</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button class="btn" type="submit">Send</button>
+            </form>
+
+            <p class="fallback">
+                Or email me directly at
+                <a href="mailto:ravi@genial-labs.com">ravi@genial-labs.com</a>.
+            </p>
+        </section>
+
+        <!-- ========================== NEWSLETTER ========================= -->
+        <section id="newsletter" class="newsletter">
+            <h2>Occasional notes by email</h2>
+            <p>
+                New writing on machine learning and agent systems, plus the occasional note on
+                consulting availability. No schedule, no marketing, unsubscribe in one click.
+            </p>
+
+            <!-- Buttondown newsletter: https://buttondown.com/kalia
+                 Uses the buttondown.com endpoint directly — buttondown.email still works but
+                 costs an extra redirect hop. Plain HTML form: no script tag, no iframe. -->
+            <form class="subscribe-form"
+                action="https://buttondown.com/api/emails/embed-subscribe/kalia"
+                method="post" target="_blank">
+                <label for="bd-email">Email address</label>
+                <div class="subscribe-row">
+                    <input type="email" id="bd-email" name="email" placeholder="you@company.com" required>
+                    <button class="btn" type="submit">Subscribe</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            <strong>Genial Labs</strong> &mdash; machine learning consulting by Ravi Kalia.
+        </p>
+        <p class="links">
+            <a href="mailto:ravi@genial-labs.com">ravi@genial-labs.com</a>
+            <a href="https://github.com/project-delphi">GitHub</a>
+            <a href="https://www.linkedin.com/in/ravi-kalia-phd">LinkedIn</a>
+            <a href="https://project-delphi.github.io/ml-blog/">Writing</a>
+        </p>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ravi Kalia",
+        "url": "https://genial-labs.com/",
+        "jobTitle": "Machine Learning Consultant",
+        "email": "mailto:ravi@genial-labs.com",
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Oxford",
+            "department": "Department of Statistics"
+        },
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Genial Labs",
+            "url": "https://genial-labs.com/"
+        },
+        "knowsAbout": [
+            "Machine learning",
+            "Large language model agents",
+            "Retrieval-augmented generation",
+            "Probability calibration",
+            "Statistical model evaluation",
+            "Applied machine learning in gene therapy"
+        ],
+        "sameAs": [
+            "https://github.com/project-delphi",
+            "https://www.linkedin.com/in/ravi-kalia-phd",
+            "https://project-delphi.github.io/"
+        ]
+    }
+    </script>
+
 </body>
 
 </html>

@@ -1,60 +1,470 @@
-/* Make the whole page a dark background color */
-body,header {
-    background-color: #011d2b !important; /* Adjust the color as needed */
-    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    color: #afb4b7;
+/* ==========================================================================
+   genial-labs.com
+   Hand-written, no framework, no build step, no external requests.
+   Replaces the previous cdn.simplecss.org dependency.
+   ========================================================================== */
+
+:root {
+    /* Declares the page as already-dark. Stops Chrome's auto-dark-mode and
+       extensions like Dark Reader from re-processing colours that are already
+       correct, and makes native form controls and scrollbars render dark. */
+    color-scheme: dark;
+
+    /* Palette carried over from the original site and the logo artwork. */
+    --bg:            #011d2b;
+    --bg-raised:     #06283a;
+    --border:        #14405a;
+    --text:          #c3c9cd;  /* lightened from #afb4b7 for AA at small sizes */
+    --text-muted:    #8b969d;
+    --heading:       #eef3f5;
+
+    /* #29a482 sits at ~4.0:1 on --bg, below AA for body text, so it is kept for
+       fills and large type only. --accent-text is the accessible variant used
+       for inline links. */
+    --accent:        #29a482;
+    --accent-text:   #4fd6a8;
+    --accent-hover:  #7ee8c4;
+
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+            "Segoe UI Emoji";
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+    --measure: 68ch;
+    --page-max: 62rem;
+    --radius: 10px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    /* Anchored sections clear the sticky header. */
+    scroll-padding-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
 }
 
 body {
-    text-align: justify;
-  }
-
-h1 {
     margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
 }
 
-img {
-    margin: 0;
+h1, h2, h3 {
+    color: var(--heading);
+    line-height: 1.2;
+    font-weight: 650;
+    text-wrap: balance;
 }
 
-.slogan {
-    margin:2px 0 40px 0;
-}
-.hero {
-    text-align: center;
+p { max-width: var(--measure); }
+
+a { color: var(--accent-text); }
+a:hover { color: var(--accent-hover); }
+
+code {
+    font-family: var(--mono);
+    font-size: 0.9em;
+    background: var(--bg-raised);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
 }
 
-nav{
-   text-align: center; 
+:focus-visible {
+    outline: 2px solid var(--accent-hover);
+    outline-offset: 3px;
+    border-radius: 3px;
 }
 
-nav > a{
-    color: #29a482 !important;
-    font-weight: bold;
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--accent);
+    color: #04202e;
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    z-index: 100;
+}
+.skip-link:focus {
+    left: 0;
+}
+
+/* ============================== HEADER ================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+    padding: 0.85rem clamp(1rem, 4vw, 2.5rem);
+    background: rgba(1, 29, 43, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+}
+
+.wordmark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--heading);
+    font-weight: 700;
+    letter-spacing: 0.01em;
     text-decoration: none;
-    margin: 0 40px;
+}
+.wordmark img { display: block; }
+
+.site-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 1.4rem;
+}
+
+.site-header nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 550;
+}
+.site-header nav a:hover { color: var(--accent-hover); }
+.site-header nav a.btn { color: #04202e; }
+
+/* =============================== LAYOUT ================================ */
+
+main {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 2.5rem);
 }
 
 section {
-    border: none !important;
-    margin: 0 !important;
+    padding: clamp(3rem, 7vw, 5rem) 0;
+    border-top: 1px solid var(--border);
 }
 
-/* Targeting small tablets in portrait mode (7-8 inches) */
-@media only screen and (max-width: 1000px) and (orientation: portrait) {
+section:first-child { border-top: none; }
 
-    nav {
-        display: flex;
-        flex-direction: column;
+section > h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    margin: 0 0 0.75rem;
+}
+
+.section-intro {
+    color: var(--text-muted);
+    margin: 0 0 2.5rem;
+}
+
+.subhead {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin: 2.75rem 0 1rem;
+}
+
+/* ================================ HERO ================================= */
+
+.hero {
+    padding-top: clamp(3.5rem, 9vw, 7rem);
+    padding-bottom: clamp(3rem, 7vw, 5rem);
+}
+
+.eyebrow {
+    color: var(--accent-text);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0 0 0.9rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 8vw, 4.25rem);
+    letter-spacing: -0.025em;
+    margin: 0 0 1.5rem;
+}
+
+.positioning {
+    font-size: clamp(1.15rem, 2.6vw, 1.4rem);
+    line-height: 1.5;
+    color: var(--heading);
+    margin: 0 0 1.25rem;
+    max-width: min(56ch, 100%);
+}
+
+.credential {
+    color: var(--text-muted);
+    margin: 0 0 2.25rem;
+}
+
+.cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    max-width: none;
+    margin: 0;
+}
+
+/* =============================== BUTTONS =============================== */
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #04202e;
+    font-weight: 650;
+    font-size: 1rem;
+    padding: 0.7rem 1.4rem;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+.btn:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: #04202e;
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--accent-text);
+    border-color: var(--border);
+}
+.btn-ghost:hover {
+    background: transparent;
+    border-color: var(--accent-hover);
+    color: var(--accent-hover);
+}
+
+.btn-small {
+    padding: 0.42rem 0.95rem;
+    font-size: 0.9rem;
+}
+
+/* ============================= WORK CARDS ============================== */
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 27rem), 1fr));
+    /* Cards size to their content rather than stretching to the tallest in the
+       row, which otherwise leaves large gaps under the shorter cards. */
+    align-items: start;
+    gap: 1.25rem;
+}
+
+.work-card {
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+}
+
+.work-card h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.4rem;
+}
+
+.card-meta {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin: 0 0 1.25rem;
+}
+
+.work-card dl { margin: 0; }
+
+.work-card dt {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--accent-text);
+    margin-bottom: 0.3rem;
+}
+
+.work-card dd {
+    margin: 0 0 1.15rem;
+    font-size: 0.965rem;
+}
+.work-card dd:last-of-type { margin-bottom: 0; }
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    margin: 1.4rem 0 0;
+    max-width: none;
+    font-size: 0.925rem;
+    font-weight: 550;
+}
+
+/* ============================ CAPABILITIES ============================= */
+
+.capability-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+    gap: 2.25rem 3rem;
+}
+
+.capability h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.6rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--accent);
+    display: inline-block;
+}
+
+.capability p { margin: 0 0 0.75rem; }
+.capability .links { margin-top: 0.5rem; }
+
+/* ============================== POST LIST ============================== */
+
+.post-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.post-list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 1.1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.post-list time {
+    flex: 0 0 7.5rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.post-list a { text-decoration: none; }
+.post-list a:hover { text-decoration: underline; }
+
+.post-list.plain span { color: var(--text); }
+.post-list em { color: var(--text-muted); font-style: normal; }
+
+/* =============================== FORMS ================================= */
+
+.contact-form {
+    margin: 2.5rem 0 1.5rem;
+    max-width: 34rem;
+}
+
+.field { margin-bottom: 1.1rem; }
+
+/* Formspree honeypot. Hidden from sighted users, screen readers (aria-hidden)
+   and the tab order (tabindex="-1") — but still present in the DOM for bots
+   to fill in, which is what flags them as spam. */
+input[name="_gotcha"] { display: none; }
+
+.field label,
+.subscribe-form label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--heading);
+    margin-bottom: 0.4rem;
+}
+
+.optional { color: var(--text-muted); font-weight: 400; }
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.65rem 0.85rem;
+}
+
+input::placeholder { color: var(--text-muted); }
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: var(--accent);
+}
+
+textarea { resize: vertical; }
+
+.fallback {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ============================= NEWSLETTER ============================== */
+
+.newsletter {
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: clamp(1.75rem, 4vw, 2.75rem);
+    margin-bottom: clamp(3rem, 7vw, 5rem);
+}
+
+.newsletter h2 { margin-top: 0; }
+
+.subscribe-form { margin-top: 1.5rem; max-width: 32rem; }
+
+.subscribe-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+.subscribe-row input { flex: 1 1 15rem; }
+
+/* =============================== FOOTER ================================ */
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    padding: 2.5rem clamp(1rem, 4vw, 2.5rem);
+    max-width: var(--page-max);
+    margin: 0 auto;
+    color: var(--text-muted);
+    font-size: 0.925rem;
+}
+
+.site-footer p { margin: 0 0 0.65rem; }
+.site-footer strong { color: var(--text); }
+
+/* ============================== RESPONSIVE ============================= */
+
+/* The previous sheet used `max-width: 1000px AND orientation: portrait`, which
+   meant a phone in landscape never got the stacked layout. Width alone. */
+@media (max-width: 40rem) {
+    .site-header {
+        justify-content: center;
+        text-align: center;
     }
 
-    nav > a{
-        
-        color: #29a482 !important;
-        font-weight: bold;
-        text-decoration: none;
-        margin: 8px 0px;
-        
+    .site-header nav {
+        justify-content: center;
+        gap: 0.35rem 1rem;
     }
-  
-  }
+
+    .post-list time { flex-basis: 100%; }
+
+    .cta-row .btn { flex: 1 1 auto; text-align: center; }
+}
