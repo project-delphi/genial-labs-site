@@ -7,14 +7,17 @@
 
     <title>Ravi Kalia — Machine learning consulting | Genial Labs</title>
     <meta name="description"
-        content="Ravi Kalia, DPhil in Statistical Machine Learning (Oxford). Independent ML consulting: LLM agents and retrieval systems, probability calibration and model evaluation, and applied machine learning in scientific domains.">
+        content="Independent machine learning consulting by Ravi Kalia, DPhil in Statistical Machine Learning (Oxford). LLM agents and retrieval systems, and the evaluation and calibration work that tells you whether they actually work.">
     <link rel="canonical" href="https://genial-labs.com/">
     <meta name="theme-color" content="#011d2b">
 
     <meta property="og:title" content="Ravi Kalia — Machine learning consulting | Genial Labs">
     <meta property="og:description"
-        content="Independent ML consulting: LLM agents and retrieval systems, probability calibration and model evaluation, and applied machine learning in scientific domains.">
-    <meta property="og:image" content="https://genial-labs.com/assets/brain_logo.png">
+        content="LLM agents and retrieval systems, and the evaluation and calibration work that tells you whether they actually work.">
+    <meta property="og:image" content="https://genial-labs.com/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Genial Labs — machine learning consulting by Ravi Kalia">
     <meta property="og:url" content="https://genial-labs.com/">
     <meta property="og:site_name" content="Genial Labs">
     <meta property="og:type" content="website">
@@ -22,6 +25,12 @@
 
     <link rel="icon" type="image/png" href="./assets/favicon.png">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Plausible: no cookies, no personal data, so no consent banner is required.
+         The outbound-links build counts clicks on the booking link without needing
+         any extra markup on the buttons themselves. -->
+    <script defer data-domain="genial-labs.com"
+        src="https://plausible.io/js/script.outbound-links.js"></script>
 </head>
 
 <body>
@@ -29,16 +38,16 @@
 
     <header class="site-header">
         <a class="wordmark" href="/">
-            <img src="./assets/favicon.png" alt="" width="36" height="25">
+            <img src="./assets/favicon.png" alt="" width="36" height="36">
             <span>Genial&nbsp;Labs</span>
         </a>
         <nav aria-label="Primary">
+            <a href="#services">Services</a>
             <a href="#work">Work</a>
-            <a href="#help">Services</a>
             <a href="#writing">Writing</a>
             <a href="#talks">Talks</a>
             <a href="#about">About</a>
-            <a class="btn btn-small" href="https://calendar.app.google/dGPzDkEEuXYKe1zj6">Book a call</a>
+            <a class="btn btn-small" href="https://calendar.app.google/dGPzDkEEuXYKe1zj6?utm_source=genial-labs.com&utm_medium=web&utm_content=nav">Book a call</a>
         </nav>
     </header>
 
@@ -49,18 +58,87 @@
             <p class="eyebrow">Genial Labs</p>
             <h1>Ravi Kalia</h1>
             <p class="positioning">
-                I help teams ship machine learning systems that hold up in production — LLM agents
-                and retrieval pipelines, and the evaluation work that tells you whether any of it
-                is actually working.
+                I build LLM agents and retrieval systems — and, the harder half of the job,
+                the evaluation that tells you whether they actually work.
             </p>
-            <p class="credential">
-                DPhil in Statistical Machine Learning, University of Oxford &middot; Senior Machine
-                Learning Scientist at Kriya Therapeutics, 2021&ndash;2023 &middot; Docker Captain.
+            <p class="audience">
+                For teams where being wrong is expensive: scientific and clinical work,
+                regulated data, and anywhere a confident wrong answer costs more than no
+                answer at all.
             </p>
             <p class="cta-row">
-                <a class="btn" href="https://calendar.app.google/dGPzDkEEuXYKe1zj6">Book a call</a>
+                <a class="btn" href="https://calendar.app.google/dGPzDkEEuXYKe1zj6?utm_source=genial-labs.com&utm_medium=web&utm_content=hero">Book a call</a>
                 <a class="btn btn-ghost" href="#work">See the work</a>
             </p>
+
+            <ul class="credential-strip">
+                <li>DPhil, Statistical Machine Learning, Oxford &mdash; supervised by <a href="https://en.wikipedia.org/wiki/Brian_D._Ripley">Brian&nbsp;D.&nbsp;Ripley</a></li>
+                <li><a href="https://www.docker.com/contributors/ravi-kalia/">Docker Captain</a></li>
+                <li>Published in <em>Cell &amp; Gene Therapy Insights</em></li>
+                <li><a href="https://github.com/pyg-team/pytorch_geometric/commits?author=project-delphi">PyTorch Geometric</a> contributor</li>
+                <li>PyCon &amp; PyData speaker</li>
+            </ul>
+        </section>
+
+        <!-- ========================== SERVICES =========================== -->
+        <section id="services">
+            <h2>How I can help</h2>
+            <p class="section-intro">
+                Four ways I take on work. Each one is tied to something in the next section
+                rather than to a keyword list.
+            </p>
+
+            <div class="capability-list">
+                <article class="capability">
+                    <h3>Evaluation and calibration audit</h3>
+                    <p class="card-meta">2&ndash;3 weeks &middot; fixed scope</p>
+                    <p>
+                        The hardest question in an ML project is rarely "can we build it" — it is
+                        "how do we know it is working, and how confident should we be". I take an
+                        existing model or agent and build the apparatus that answers it: an
+                        evaluation suite tied to the decision you are actually making, calibration
+                        of the scores it produces, and a written recommendation you can act on.
+                        My doctorate was on exactly this, and it is the part of the field most AI
+                        consultancies skip.
+                    </p>
+                    <p class="links"><a href="#work">See the doctoral work &rarr;</a></p>
+                </article>
+
+                <article class="capability">
+                    <h3>Agent and retrieval build</h3>
+                    <p class="card-meta">6&ndash;12 weeks &middot; hands-on</p>
+                    <p>
+                        Agent architectures, context and memory management, and RAG pipelines built
+                        on documents that are messy in the ways real documents are. Evaluation wired
+                        in from the first week rather than bolted on once something has already gone
+                        wrong in production.
+                    </p>
+                    <p class="links"><a href="#work">See the ingestion work &rarr;</a></p>
+                </article>
+
+                <article class="capability">
+                    <h3>Applied ML for scientific data</h3>
+                    <p class="card-meta">Project length varies</p>
+                    <p>
+                        Gene therapy and proteomics, remote sensing, drug-discovery feature
+                        selection. Domains where the data is expensive, the experiments are slow,
+                        and the model's real job is to decide what to test next.
+                    </p>
+                    <p class="links"><a href="#work">See the gene therapy work &rarr;</a></p>
+                </article>
+
+                <article class="capability">
+                    <h3>Fractional ML lead</h3>
+                    <p class="card-meta">Ongoing &middot; part-time</p>
+                    <p>
+                        For teams with good engineers and nobody senior who has taken machine
+                        learning to production before. Architecture review, hiring, mentoring, and
+                        the unglamorous work of turning research code into something monitored,
+                        tested and maintainable.
+                    </p>
+                    <p class="links"><a href="#talks">See the talks &rarr;</a></p>
+                </article>
+            </div>
         </section>
 
         <!-- ========================= SELECTED WORK ======================= -->
@@ -72,6 +150,68 @@
             </p>
 
             <div class="work-grid">
+
+                <article class="work-card">
+                    <h3>Machine learning for gene therapy</h3>
+                    <p class="card-meta">Kriya Therapeutics &middot; Senior Machine Learning Scientist &middot; 2021&ndash;2023</p>
+                    <dl>
+                        <dt>Problem</dt>
+                        <dd>
+                            Designing recombinant AAV vectors means searching a combinatorial
+                            sequence space that is far too large to assay exhaustively in the lab.
+                        </dd>
+                        <dt>Approach</dt>
+                        <dd>
+                            Generative models applied to the biomolecular engineering of gene
+                            therapies: folding proteins and designing capsids, optimising promoters,
+                            miniaturising ITRs, and engineering for antibody avoidance — so that
+                            wet-lab budget goes to the variants most likely to work.
+                        </dd>
+                        <dt>Outcome</dt>
+                        <dd>
+                            The methods were written up and peer reviewed: Rabinowitz &amp; Kalia,
+                            &ldquo;Fine tuning AAV: machine learning the capsid&rdquo;,
+                            <em>Cell &amp; Gene Therapy Insights</em> 2023; 9(4), 785&ndash;798.
+                        </dd>
+                    </dl>
+                    <p class="links">
+                        <a href="https://www.insights.bio/cell-and-gene-therapy-insights/journal/article/2885/Fine-tuning-AAV-machine-learning-the-capsid">Read the paper</a>
+                        <a href="https://doi.org/10.18609/cgti.2023.099">DOI</a>
+                        <a href="https://project-delphi.github.io/gene-therapy-talk/">Talk: ML in Gene Therapy</a>
+                    </p>
+                </article>
+
+                <article class="work-card">
+                    <h3>Document ingestion for retrieval systems</h3>
+                    <p class="card-meta">Open-source tooling</p>
+                    <dl>
+                        <dt>Problem</dt>
+                        <dd>
+                            Retrieval systems rarely fail at the embedding step. They fail earlier,
+                            on the unglamorous work of getting real Word and PDF documents into
+                            clean, correctly segmented text.
+                        </dd>
+                        <dt>Approach</dt>
+                        <dd>
+                            Built and released two pieces of that layer: a Word document parser
+                            producing structured JSON, and a classifier that labels extracted PDF
+                            text chunks by type so downstream chunking can respect document
+                            structure instead of splitting on character counts.
+                        </dd>
+                        <dt>Stack</dt>
+                        <dd>Python, <code>unstructured</code>, scikit-learn</dd>
+                        <dt>Outcome</dt>
+                        <dd>
+                            Both released as standalone open-source tools, so the ingestion layer is
+                            something I bring to an engagement rather than something a client pays
+                            to have rebuilt.
+                        </dd>
+                    </dl>
+                    <p class="links">
+                        <a href="https://github.com/project-delphi/word_file_parser">word_file_parser</a>
+                        <a href="https://github.com/project-delphi/classify-pdf-text-chunks">classify-pdf-text-chunks</a>
+                    </p>
+                </article>
 
                 <article class="work-card">
                     <h3>Ordinal classification and calibrated probabilities</h3>
@@ -97,42 +237,17 @@
                             is measured by what a stochastic-programming gambling strategy built on
                             it would actually earn. Proper scoring in the most literal sense.
                         </dd>
+                        <dt>Outcome</dt>
+                        <dd>
+                            A thesis, three accompanying papers, and the evaluation method I still
+                            use to decide whether a client's model is good enough to act on.
+                        </dd>
                     </dl>
                     <p class="links">
                         <a href="https://github.com/project-delphi/doctoral-thesis">Thesis (PDF)</a>
                         <a href="https://github.com/project-delphi/rankingSVM-algorithm">RankingSVM paper</a>
                         <a href="https://github.com/project-delphi/comparing-classifiers">Comparing classifiers</a>
                         <a href="https://github.com/project-delphi/ordinal-classification-survey">Survey</a>
-                    </p>
-                </article>
-
-                <article class="work-card">
-                    <h3>Machine learning for gene therapy</h3>
-                    <p class="card-meta">Kriya Therapeutics &middot; Senior Machine Learning Scientist &middot; 2021&ndash;2023</p>
-                    <dl>
-                        <dt>Problem</dt>
-                        <dd>
-                            Designing recombinant AAV vectors means searching a combinatorial
-                            sequence space that is far too large to assay exhaustively in the lab.
-                        </dd>
-                        <dt>Approach</dt>
-                        <dd>
-                            Generative models applied to the biomolecular engineering of gene
-                            therapies: folding proteins and designing capsids, optimising promoters,
-                            miniaturising ITRs, and engineering for antibody avoidance — so that
-                            wet-lab budget goes to the variants most likely to work.
-                        </dd>
-                        <dt>Published</dt>
-                        <dd>
-                            Rabinowitz &amp; Kalia, &ldquo;Fine tuning AAV: machine learning the
-                            capsid&rdquo;, <em>Cell &amp; Gene Therapy Insights</em> 2023;
-                            9(4), 785&ndash;798.
-                        </dd>
-                    </dl>
-                    <p class="links">
-                        <a href="https://www.insights.bio/cell-and-gene-therapy-insights/journal/article/2885/Fine-tuning-AAV-machine-learning-the-capsid">Read the paper</a>
-                        <a href="https://doi.org/10.18609/cgti.2023.099">DOI</a>
-                        <a href="https://project-delphi.github.io/gene-therapy-talk/">Talk: ML in Gene Therapy</a>
                     </p>
                 </article>
 
@@ -148,9 +263,15 @@
                         <dt>Approach</dt>
                         <dd>
                             Proposed and prototyped semantic parsing of natural language into complex
-                            SQL, working from the then-current research literature, and built a demo
-                            for the team. Also ran internal machine learning meet-ups to get the
-                            wider engineering group up to speed on the field.
+                            SQL, working from the then-current research literature — the problem the
+                            whole industry now reaches for an LLM to solve, approached before there
+                            was one to reach for.
+                        </dd>
+                        <dt>Outcome</dt>
+                        <dd>
+                            A working demo the engineering team could try, and an internal machine
+                            learning meet-up series that brought the wider group up to speed on the
+                            field.
                         </dd>
                     </dl>
                     <p class="links">
@@ -159,223 +280,88 @@
                     </p>
                 </article>
 
-                <article class="work-card">
-                    <h3>Document ingestion for retrieval systems</h3>
-                    <p class="card-meta">Open-source tooling</p>
-                    <dl>
-                        <dt>Problem</dt>
-                        <dd>
-                            Retrieval systems rarely fail at the embedding step. They fail earlier,
-                            on the unglamorous work of getting real Word and PDF documents into
-                            clean, correctly segmented text.
-                        </dd>
-                        <dt>Approach</dt>
-                        <dd>
-                            Built and released two pieces of that layer: a Word document parser
-                            producing structured JSON, and a classifier that labels extracted PDF
-                            text chunks by type so downstream chunking can respect document
-                            structure instead of splitting on character counts.
-                        </dd>
-                        <dt>Stack</dt>
-                        <dd>Python, <code>unstructured</code>, scikit-learn</dd>
-                    </dl>
-                    <p class="links">
-                        <a href="https://github.com/project-delphi/word_file_parser">word_file_parser</a>
-                        <a href="https://github.com/project-delphi/classify-pdf-text-chunks">classify-pdf-text-chunks</a>
-                    </p>
-                </article>
-
-                <article class="work-card">
-                    <h3>Object detection in satellite imagery</h3>
-                    <p class="card-meta">Sargassum detection from LANDSAT data</p>
-                    <dl>
-                        <dt>Problem</dt>
-                        <dd>
-                            Sargassum seaweed blooms wash onto Caribbean coastlines with little
-                            warning. Detecting rafts at sea from satellite imagery gives coastal
-                            operators lead time.
-                        </dd>
-                        <dt>Approach</dt>
-                        <dd>
-                            Built an object detector over multispectral LANDSAT scenes to locate
-                            sargassum rafts on open water.
-                        </dd>
-                    </dl>
-                    <p class="links">
-                        <a href="https://github.com/project-delphi/object-detector">Code and notebooks</a>
-                    </p>
-                </article>
-
-                <article class="work-card">
-                    <h3>Anomaly detection without labels</h3>
-                    <p class="card-meta">Isolation forests and random cut forests</p>
-                    <dl>
-                        <dt>Problem</dt>
-                        <dd>
-                            Anomaly detection is usually posed where it is hardest: no labels, heavy
-                            class imbalance, and a shifting definition of "normal".
-                        </dd>
-                        <dt>Approach</dt>
-                        <dd>
-                            Implemented and compared isolation forests and random cut forests on
-                            unlabelled data, including the streaming case where the model has to
-                            update as the baseline moves.
-                        </dd>
-                    </dl>
-                    <p class="links">
-                        <a href="https://github.com/project-delphi/anomaly_detection">Code</a>
-                        <a href="https://github.com/project-delphi/feature-selection">Feature selection experiments</a>
-                    </p>
-                </article>
-
-                <!-- Client engagement template. Fill in and uncomment one per engagement.
-                     See README for what each field needs.
-
-                <article class="work-card">
-                    <h3>ENGAGEMENT TITLE</h3>
-                    <p class="card-meta">CLIENT OR SECTOR &middot; YEAR</p>
-                    <dl>
-                        <dt>Problem</dt>
-                        <dd>WHAT THEY CAME TO YOU WITH</dd>
-                        <dt>Approach</dt>
-                        <dd>WHAT YOU BUILT</dd>
-                        <dt>Stack</dt>
-                        <dd>TOOLS</dd>
-                        <dt>Outcome</dt>
-                        <dd>RESULT, WITH A NUMBER IF YOU HAVE ONE</dd>
-                    </dl>
-                    <p class="links"><a href="URL">Writeup</a></p>
-                </article>
-
-                ================================================================== -->
-
             </div>
+
+            <h3 class="subhead">Also</h3>
+            <ul class="post-list also-list">
+                <li>
+                    <strong>Object detection in satellite imagery</strong>
+                    <span>
+                        An object detector over multispectral LANDSAT scenes, locating sargassum
+                        rafts on open water so Caribbean coastal operators get warning before a
+                        bloom lands.
+                    </span>
+                    <a href="https://github.com/project-delphi/object-detector">Code and notebooks</a>
+                </li>
+                <li>
+                    <strong>Anomaly detection without labels</strong>
+                    <span>
+                        Isolation forests and random cut forests compared on unlabelled, heavily
+                        imbalanced data, including the streaming case where the model has to update
+                        as the definition of normal moves.
+                    </span>
+                    <a href="https://github.com/project-delphi/anomaly_detection">Code</a>
+                    <a href="https://github.com/project-delphi/feature-selection">Feature selection experiments</a>
+                </li>
+            </ul>
         </section>
 
-        <!-- ========================== SERVICES =========================== -->
-        <section id="help">
-            <h2>How I can help</h2>
-            <p class="section-intro">
-                Four things I am genuinely good at, each tied to work above rather than to a
-                keyword list.
+        <!-- ========================= MID-PAGE CTA ======================== -->
+        <section class="mid-cta">
+            <h2>Recognise your problem in any of that?</h2>
+            <p>
+                Half an hour is usually enough to tell whether I am the right person for it, and
+                I will say so either way.
             </p>
-
-            <div class="capability-list">
-                <article class="capability">
-                    <h3>Evaluation, calibration and knowing whether it works</h3>
-                    <p>
-                        The hardest question in an ML project is rarely "can we build it" — it is
-                        "how do we know it is working, and how confident should we be". My doctorate
-                        was on exactly this: turning classifier scores into probabilities you can
-                        make decisions against, and measuring models by what acting on them would
-                        cost or earn. It is the part of the field most AI consultancies skip.
-                    </p>
-                    <p class="links"><a href="#work">See the doctoral work &rarr;</a></p>
-                </article>
-
-                <article class="capability">
-                    <h3>LLM agents and retrieval systems</h3>
-                    <p>
-                        Agent architectures, context and memory management, and RAG pipelines built
-                        on documents that are messy in the ways real documents are. I write about
-                        this constantly and have shipped the ingestion tooling underneath it.
-                    </p>
-                    <p class="links"><a href="#writing">Recent writing &rarr;</a></p>
-                </article>
-
-                <article class="capability">
-                    <h3>Applied ML in scientific domains</h3>
-                    <p>
-                        Gene therapy and proteomics, remote sensing, drug-discovery feature
-                        selection. Domains where the data is expensive, the experiments are slow,
-                        and the model's job is to decide what to test next.
-                    </p>
-                    <p class="links"><a href="#work">See the gene therapy work &rarr;</a></p>
-                </article>
-
-                <article class="capability">
-                    <h3>Getting models into production</h3>
-                    <p>
-                        Taking research code to something monitored, tested and maintainable — the
-                        subject of my PyData talk on ML in production, and of a talk on using
-                        machine learning to supervise test-driven development.
-                    </p>
-                    <p class="links"><a href="#talks">See the talks &rarr;</a></p>
-                </article>
-            </div>
+            <p class="cta-row">
+                <a class="btn" href="https://calendar.app.google/dGPzDkEEuXYKe1zj6?utm_source=genial-labs.com&utm_medium=web&utm_content=midpage">Book a 30-minute call</a>
+                <a class="btn btn-ghost" href="#contact">Write to me instead</a>
+            </p>
         </section>
 
         <!-- =========================== WRITING =========================== -->
         <section id="writing">
-            <h2>Writing</h2>
+            <h2>Selected writing</h2>
             <p class="section-intro">
-                I write regularly at <em>Synthetic Musings</em> — currently 80+ posts on machine
-                learning, agents, statistics and the tooling around them.
+                I write at <em>Synthetic Musings</em> — 80+ posts on machine learning, agents,
+                statistics and the tooling around them. A sample, by subject.
             </p>
 
-            <ul class="post-list">
-                <li>
-                    <time datetime="2026-08-03">3 Aug 2026</time>
-                    <a href="https://project-delphi.github.io/ml-blog/posts/intelligence-for-novel-problems/">Built for Problems It Has Never Seen</a>
-                </li>
-                <li>
-                    <time datetime="2026-08-03">3 Aug 2026</time>
-                    <a href="https://project-delphi.github.io/ml-blog/posts/llm-agent-memory/">Your LLM Has No Memory. Everything Else Is Engineering.</a>
-                </li>
-                <li>
-                    <time datetime="2026-08-03">3 Aug 2026</time>
-                    <a href="https://project-delphi.github.io/ml-blog/posts/open-source-tts-history/">From Formants to Foundation Models</a>
-                </li>
-                <li>
-                    <time datetime="2026-08-02">2 Aug 2026</time>
-                    <a href="https://project-delphi.github.io/ml-blog/posts/llm-agents-from-first-principles/">LLM Agents from First Principles</a>
-                </li>
-                <li>
-                    <time datetime="2026-07-31">31 Jul 2026</time>
-                    <a href="https://project-delphi.github.io/ml-blog/posts/explainability-localization/">Explainability Is a Localization Problem</a>
-                </li>
-                <li>
-                    <time datetime="2026-07-30">30 Jul 2026</time>
-                    <a href="https://project-delphi.github.io/ml-blog/posts/nvidia-buys-the-pyg-team/">Nvidia Bought the Team Behind the Library I Contribute To</a>
-                </li>
-                <li>
-                    <time datetime="2026-07-28">28 Jul 2026</time>
-                    <a href="https://project-delphi.github.io/ml-blog/posts/brian-ripley-rousseeuw-prize/">The Professor Who Let Us Break R First</a>
-                </li>
-                <li>
-                    <time datetime="2026-07-28">28 Jul 2026</time>
-                    <a href="https://project-delphi.github.io/ml-blog/posts/swarms-in-worktrees/">Swarms in Worktrees: How Claude Code Agents Work in Parallel</a>
-                </li>
+            <h3 class="subhead">Agents, memory and context</h3>
+            <ul class="post-list themed">
+                <li><a href="https://project-delphi.github.io/ml-blog/posts/llm-agent-memory/">Your LLM Has No Memory. Everything Else Is Engineering.</a></li>
+                <li><a href="https://project-delphi.github.io/ml-blog/posts/llm-agents-from-first-principles/">LLM Agents from First Principles</a></li>
+                <li><a href="https://project-delphi.github.io/ml-blog/posts/swarms-in-worktrees/">Swarms in Worktrees: How Claude Code Agents Work in Parallel</a></li>
+            </ul>
+
+            <h3 class="subhead">Evaluation, explainability and what models can do</h3>
+            <ul class="post-list themed">
+                <li><a href="https://project-delphi.github.io/ml-blog/posts/explainability-localization/">Explainability Is a Localization Problem</a></li>
+                <li><a href="https://project-delphi.github.io/ml-blog/posts/intelligence-for-novel-problems/">Built for Problems It Has Never Seen</a></li>
+            </ul>
+
+            <h3 class="subhead">The field and its tools</h3>
+            <ul class="post-list themed">
+                <li><a href="https://project-delphi.github.io/ml-blog/posts/open-source-tts-history/">From Formants to Foundation Models</a></li>
+                <li><a href="https://project-delphi.github.io/ml-blog/posts/nvidia-buys-the-pyg-team/">Nvidia Bought the Team Behind the Library I Contribute To</a></li>
+                <li><a href="https://project-delphi.github.io/ml-blog/posts/brian-ripley-rousseeuw-prize/">The Professor Who Let Us Break R First</a></li>
             </ul>
 
             <p class="links">
                 <a href="https://project-delphi.github.io/ml-blog/">All writing &rarr;</a>
             </p>
-
         </section>
 
         <!-- ==================== TALKS, PAPERS, OPEN SOURCE ==================== -->
         <section id="talks">
             <h2>Talks, papers and open source</h2>
 
-            <h3 class="subhead">Recent talks</h3>
-            <ul class="post-list">
-                <li>
-                    <time datetime="2026">2026</time>
-                    <a href="https://project-delphi.github.io/gene-therapy-talk/">ML in Gene Therapy: rAAV capsid, promoter and ITR engineering</a>
-                </li>
-                <li>
-                    <time datetime="2026">2026</time>
-                    <a href="https://project-delphi.github.io/ai-past-present-future-talk/">AI: Past, Present and Future</a>
-                </li>
-                <li>
-                    <time datetime="2026">2026</time>
-                    <a href="https://project-delphi.github.io/variational-autoencoders/">Autoencoders and Variational Autoencoders</a>
-                </li>
-                <li>
-                    <time datetime="2026">2026</time>
-                    <a href="https://project-delphi.github.io/first-job-in-industry/">Getting Your First Job in Industry</a>
-                </li>
+            <h3 class="subhead">Talks you can watch or read now</h3>
+            <ul class="post-list themed">
+                <li><a href="https://project-delphi.github.io/gene-therapy-talk/">ML in Gene Therapy: rAAV capsid, promoter and ITR engineering</a></li>
+                <li><a href="https://project-delphi.github.io/ai-past-present-future-talk/">AI: Past, Present and Future</a></li>
+                <li><a href="https://project-delphi.github.io/variational-autoencoders/">Autoencoders and Variational Autoencoders</a></li>
+                <li><a href="https://project-delphi.github.io/first-job-in-industry/">Getting Your First Job in Industry</a></li>
             </ul>
 
             <h3 class="subhead">Conference and academic talks</h3>
@@ -385,9 +371,7 @@
                 <li><time datetime="2019-08">Aug 2019</time> <span>Machine Learning Supervising TDD &mdash; <em>Software Crafters, Montreal</em></span></li>
                 <li><time datetime="2019-05">May 2019</time> <span>Anomaly Detection using Clustering &mdash; <em>National Polytechnic Institute, Mexico City</em></span></li>
                 <li><time datetime="2019-04">Apr 2019</time> <span>Introduction to Machine Learning &mdash; <em>Google Developer Group, Mexico City</em></span></li>
-                <li><time datetime="2018-10">Oct 2018</time> <span>Building Financial Services on Blockchain &mdash; <em>Viva La Crypto Festival, Monterrey</em></span></li>
                 <li><time datetime="2016-10">Oct 2016</time> <span>Assessing Predictive Probabilities &mdash; <em>University of Victoria</em></span></li>
-                <li><time datetime="2015-02">Feb 2015</time> <span>Sports Betting in Asia &mdash; <em>University of the Philippines, Manila</em></span></li>
                 <li><time datetime="2012-04">Apr 2012</time> <span>Markov Decision Processes &mdash; <em>Queen's University, Ontario</em></span></li>
             </ul>
 
@@ -458,17 +442,15 @@
         <section id="contact">
             <h2>Work together</h2>
             <p class="section-intro">
-                The fastest route is to put half an hour in my calendar. If you would rather write
-                first, the form goes straight to my inbox.
+                Two ways in, and neither is better than the other. Put half an hour in my calendar,
+                or write first and tell me what you are up against — the form goes straight to my
+                inbox.
             </p>
 
             <p class="cta-row">
-                <a class="btn" href="https://calendar.app.google/dGPzDkEEuXYKe1zj6">Book a 30-minute call</a>
+                <a class="btn" href="https://calendar.app.google/dGPzDkEEuXYKe1zj6?utm_source=genial-labs.com&utm_medium=web&utm_content=contact">Book a 30-minute call</a>
             </p>
 
-            <!-- Posts to Formspree form xeajqklq -> ravi@genial-labs.com. Formspree requires the
-                 first submission on a new form to be confirmed by the owner, so send one test
-                 message yourself before relying on this. -->
             <form class="contact-form" action="https://formspree.io/f/xeajqklq" method="POST">
                 <!-- Formspree control fields. _subject sets the email subject line so enquiries
                      are identifiable in the inbox; _gotcha is a honeypot — real people never see
@@ -487,6 +469,15 @@
                 <div class="field">
                     <label for="company">Company <span class="optional">(optional)</span></label>
                     <input type="text" id="company" name="company" autocomplete="organization">
+                </div>
+                <div class="field">
+                    <label for="timeline">Where are you with it?</label>
+                    <select id="timeline" name="timeline">
+                        <option value="Exploring — no timeline yet">Exploring — no timeline yet</option>
+                        <option value="Starting within a quarter">Starting within a quarter</option>
+                        <option value="Ready to start now">Ready to start now</option>
+                        <option value="Something is already broken">Something is already broken</option>
+                    </select>
                 </div>
                 <div class="field">
                     <label for="message">What are you working on?</label>
@@ -540,33 +531,51 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Ravi Kalia",
-        "url": "https://genial-labs.com/",
-        "jobTitle": "Machine Learning Consultant",
-        "email": "mailto:ravi@genial-labs.com",
-        "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "University of Oxford",
-            "department": "Department of Statistics"
-        },
-        "worksFor": {
-            "@type": "Organization",
-            "name": "Genial Labs",
-            "url": "https://genial-labs.com/"
-        },
-        "knowsAbout": [
-            "Machine learning",
-            "Large language model agents",
-            "Retrieval-augmented generation",
-            "Probability calibration",
-            "Statistical model evaluation",
-            "Applied machine learning in gene therapy"
-        ],
-        "sameAs": [
-            "https://github.com/project-delphi",
-            "https://www.linkedin.com/in/ravi-kalia-phd",
-            "https://project-delphi.github.io/"
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://genial-labs.com/#ravi-kalia",
+                "name": "Ravi Kalia",
+                "url": "https://genial-labs.com/",
+                "jobTitle": "Machine Learning Consultant",
+                "email": "mailto:ravi@genial-labs.com",
+                "alumniOf": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "University of Oxford",
+                    "department": "Department of Statistics"
+                },
+                "knowsAbout": [
+                    "Machine learning",
+                    "Large language model agents",
+                    "Retrieval-augmented generation",
+                    "Probability calibration",
+                    "Statistical model evaluation",
+                    "Applied machine learning in gene therapy"
+                ],
+                "sameAs": [
+                    "https://github.com/project-delphi",
+                    "https://www.linkedin.com/in/ravi-kalia-phd",
+                    "https://project-delphi.github.io/"
+                ]
+            },
+            {
+                "@type": "ProfessionalService",
+                "@id": "https://genial-labs.com/#genial-labs",
+                "name": "Genial Labs",
+                "url": "https://genial-labs.com/",
+                "description": "Independent machine learning consulting: LLM agents and retrieval systems, probability calibration and model evaluation, and applied machine learning in scientific domains.",
+                "founder": { "@id": "https://genial-labs.com/#ravi-kalia" },
+                "email": "mailto:ravi@genial-labs.com",
+                "image": "https://genial-labs.com/assets/og-image.png",
+                "areaServed": "Worldwide",
+                "serviceType": [
+                    "Machine learning consulting",
+                    "LLM agent and retrieval system development",
+                    "Model evaluation and probability calibration",
+                    "Applied machine learning for scientific data",
+                    "Fractional machine learning leadership"
+                ]
+            }
         ]
     }
     </script>

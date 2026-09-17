@@ -1,0 +1,5 @@
+# genial-labs.com
+User-agent: *
+Allow: /
+
+Sitemap: https://genial-labs.com/sitemap.xml

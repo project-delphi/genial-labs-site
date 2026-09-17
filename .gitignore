@@ -1,3 +1,4 @@
 .DS_Store
 # Local reference material, not part of the site
 *.pdf
+_site/
