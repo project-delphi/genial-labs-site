@@ -97,11 +97,13 @@ there is detection performance, or it was used operationally, it earns a card ba
 - **Formspree delivery is still unproven.** Formspree requires the owner to confirm the
   first submission on a new form before it starts delivering. Submit the live form once,
   confirm the email, and this line can go. The `mailto:` fallback works regardless.
-- **Plausible needs an account.** The script tag is live in `index.html` with
-  `data-domain="genial-labs.com"`. Until the site is added at plausible.io the beacon
-  fires into nothing — harmless, but no data. The `outbound-links` variant is used so
-  clicks on "Book a call" are counted without any extra markup. Set that up, then mark
-  the booking link as a goal.
+- **Plausible outbound-link tracking needs confirming.** The site is registered and
+  `index.html` carries the per-site script Plausible issued
+  (`/js/pa-r79QP5jHw7O4InoilgaQ0.js` plus the `plausible.init()` stub). That script has
+  no `data-domain`; the domain is baked into the file. Optional features such as
+  outbound-link tracking now live in the Plausible site settings rather than in the
+  script filename, so switch outbound links on there or clicks on "Book a call" go
+  uncounted. Then mark the booking link as a goal.
 - **The blog has no RSS feed.** `https://project-delphi.github.io/ml-blog/index.xml`
   404s. Adding `feed: true` to the listing options in `_quarto.yml` in the `ml-blog` repo
   would enable one. The Writing section is now grouped by theme rather than by date, so
