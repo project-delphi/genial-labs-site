@@ -27,10 +27,13 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Plausible: no cookies, no personal data, so no consent banner is required.
-         The outbound-links build counts clicks on the booking link without needing
-         any extra markup on the buttons themselves. -->
-    <script defer data-domain="genial-labs.com"
-        src="https://plausible.io/js/script.outbound-links.js"></script>
+         Outbound-link tracking (the booking link) is toggled on in the Plausible
+         site settings rather than in the script URL. -->
+    <script async src="https://plausible.io/js/pa-r79QP5jHw7O4InoilgaQ0.js"></script>
+    <script>
+        window.plausible = window.plausible || function () { (plausible.q = plausible.q || []).push(arguments) }, plausible.init = plausible.init || function (i) { plausible.o = i || {} };
+        plausible.init()
+    </script>
 </head>
 
 <body>

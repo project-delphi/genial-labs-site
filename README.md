@@ -35,7 +35,7 @@ a new top-level file that belongs on the site, add it to the `Assemble site` ste
 | Booking link | Google Calendar appointment schedule "Intro call — Genial Labs" |
 | Contact form | Formspree form `xeajqklq` → ravi@genial-labs.com |
 | Newsletter | [buttondown.com/kalia](https://buttondown.com/kalia) |
-| Analytics | Plausible, `data-domain="genial-labs.com"` |
+| Analytics | Plausible, per-site script `/js/pa-r79QP5jHw7O4InoilgaQ0.js` (no `data-domain` — the domain is baked into the file) |
 
 The booking URL appears four times (header, hero, mid-page CTA, contact section) with
 different `utm_content` values. If you rebuild the appointment schedule in Google Calendar
